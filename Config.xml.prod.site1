@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ArchivesSpace Basic - Trial </Name>
+  <Author>Yale University Library</Author>
+  <Version>1.2.2</Version>
+  <Active>True</Active>
+  <Type>Addon</Type>
+  <Description>Uses proxy webservice to return data from ArchivesSpace</Description>
+  <Forms>
+    <Form>FormRequest</Form>
+  </Forms>
+  <Settings>
+    <Setting name="TabName" value="ArchivesSpace - Trial" type="string">
+      <Description>Defines what text you want to appear on the addon ribbon. Does not affect logging or internal naming.</Description>
+    </Setting>
+    <Setting name="AutoSearch" value="false" type="boolean">
+      <Description>Defines whether the search should be automatically performed when the form opens. The search is Collection Number/Box #</Description>
+    </Setting>
+    <Setting name="BaseUrl" value="https://middleware-service-address" type="string">
+      <Description>The base URL for the custom AS echo webservice</Description>
+    </Setting>
+    <Setting name="defaultSite" value="AEONSITE" type="string">
+      <Description>If a repository (site) is not specified in the transaction then this site is used</Description>
+    </Setting>
+    <Setting name="ExpectedDBNames" value="AEON_DATABSE_NAME|OTHER_POSSIBLE_AEON_DATABASE_NAME" type="string">
+      <Description>Pipe separated list of expected DBNames for this configuration.</Description>
+    </Setting>
+    <Setting name="DefaultSearch" value="CN" type="string">
+      <Description>Whether addon should open to callnumber or barcode search. Valid values are "CN" and "BC" only, case sensitive</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>ASpaceBasic.lua</File>
+    <File>LaunchCheck.lua</File>
+  </Files>
+</Configuration>
